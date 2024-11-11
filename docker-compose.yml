@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"  # Mapea el puerto 80 del contenedor al puerto 8080 de tu máquina
+    volumes:
+      - ./src:/usr/share/nginx/html  # Mapea el directorio `src` local al directorio de NGINX
